@@ -1,0 +1,366 @@
+/* CommentSection.css */
+
+/* Define CSS variables for theming */
+:root {
+  --background-light: #f0f2f5;
+  --border-color: #e0e0e0;
+  --primary-color: #1876f2;
+  --text-color: #050505;
+  --text-muted: #65676b;
+  --avatar-size: 32px;
+}
+
+/* Main container for the comment section */
+.comments-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 60px); /* Adjust based on your layout */
+}
+
+/* Scrollable list of comments */
+.comments-list {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Individual comment thread */
+.comment-thread {
+  margin-bottom: 20px;
+}
+
+/* Comment layout */
+.comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+/* Reply layout */
+.reply-comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  margin-top: 8px;
+}
+
+/* Avatar styling */
+.comment-avatar {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Comment content */
+.comment-content {
+  flex: 1;
+}
+
+/* Comment header (author, timestamp, actions) */
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+  position: relative;
+}
+
+/* Author and timestamp */
+.comment-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.author {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.timestamp {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+/* Comment actions (Reply, Copy) */
+.comment-actions {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.comment:hover .comment-actions,
+.reply-comment:hover .comment-actions {
+  opacity: 1;
+}
+
+.icon-button,
+.action-button {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button img,
+.action-button img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+}
+
+.icon-button:hover img,
+.action-button:hover img {
+  opacity: 1;
+}
+
+/* Comment text */
+.comment-text {
+  width: 220px;
+  margin: 0;
+  line-height: 1.4;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+/* Comment attachment */
+.comment-attachment {
+  margin-top: 8px;
+}
+
+.attachment-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.attachment-preview {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.attachment-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.attachment-name {
+  font-size: 14px;
+}
+
+/* Replies container */
+.replies-container {
+  margin-left: calc(
+    var(--avatar-size) + 12px
+  ); /* Indent based on avatar size + gap */
+  padding-left: 12px;
+  border-left: 2px solid var(--border-color);
+  margin-top: 8px;
+}
+
+/* Reply-to username */
+.reply-to {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.reply-to:hover {
+  text-decoration: underline;
+}
+
+/* Comment form (fixed to bottom) */
+.comment-form {
+  background: white;
+}
+
+.comment-input-wrapper {
+  border: none !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.replying-to {
+  background-color: var(--background-light);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.replying-to span {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.cancel-reply {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  font-size: 14px;
+}
+
+.cancel-reply:hover {
+  color: #000;
+}
+
+/* Attached file preview */
+.attached-file-preview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--background-light);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.attached-file-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-icon {
+  font-size: 16px;
+}
+
+.file-name {
+  color: var(--text-color);
+}
+
+.remove-file-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  font-size: 14px;
+}
+
+.remove-file-btn:hover {
+  color: #000;
+}
+
+/* Input container (textarea + action buttons) */
+.input-container {
+  border: 1px solid black;
+  padding: 0px 20px;
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  height: 50px;
+}
+
+/* Textarea for new comment */
+.comment-textbox {
+  flex: 1;
+  width: 100%;
+  border: none;
+  resize: none;
+  font-size: 14px;
+  line-height: 1.4;
+  min-height: 40px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.comment-textbox:focus {
+  outline: none;
+}
+
+/* Action buttons (attachment + send) */
+.action-buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* Attachment button */
+.attach-btn {
+  padding-top: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attach-btn img {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+}
+
+/* Send button */
+.send-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-btn img {
+  width: 25px !important;
+  height: 25px !important;
+}
+
+.send-btn:hover img {
+  opacity: 0.8;
+}
+
+/* Fallback text for send button (hidden unless image fails to load) */
+.send-btn-fallback {
+  display: none;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+/* Show fallback text if the image fails to load */
+.send-btn img[src=""] + .send-btn-fallback,
+.send-btn img[alt="Send"][src$="undefined"] + .send-btn-fallback {
+  display: inline;
+}
+
+/* Custom Scrollbar */
+.comments-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.comments-list::-webkit-scrollbar-track {
+  background: var(--background-light);
+}
+
+.comments-list::-webkit-scrollbar-thumb {
+  background: #ced4da;
+  border-radius: 4px;
+}

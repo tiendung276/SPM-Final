@@ -1,0 +1,243 @@
+.member-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.defaults-section {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 24px;
+}
+
+.defaults-row {
+    display: flex;
+    gap: 24px;
+    margin: 24px 0;
+}
+
+.default-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.default-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.none-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    color: #707070;
+    width: 100%;
+}
+
+.none-icon {
+    color: #999;
+    font-size: 16px;
+}
+
+.member-select {
+    width: 100%;
+}
+
+.select-option-none,
+.select-option-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.selected-member {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.guest-access-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0;
+}
+
+.guest-access-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.members-section {
+    margin-top: 30px;
+}
+
+.members-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.members-actions {
+    display: flex;
+    align-items: center;
+}
+
+.member-table-row {
+    height: 64px;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    gap: 20px;
+}
+
+/* Thiết lập cho bảng */
+.member-container .ant-table-thead>tr>th {
+    background-color: #fafafa;
+    font-weight: 600;
+}
+
+.member-container .ant-table-tbody>tr>td {
+    padding: 16px 16px;
+}
+
+/* Styles cho Select component */
+.member-container .ant-select-selector {
+    display: flex;
+    align-items: center;
+    height: 42px !important;
+    padding: 0 12px !important;
+}
+
+.member-container .ant-select-selection-item {
+    padding: 0 !important;
+}
+
+/* Tùy chỉnh cho dropdown menu */
+.member-container .ant-select-dropdown {
+    padding: 4px 0;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.member-container .ant-select-item {
+    padding: 8px 12px;
+}
+
+.member-container .ant-select-item-option-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.member-container .ant-select-item-option-selected {
+    background-color: #f5f5f5;
+}
+
+.member-container .ant-select-item-option-active {
+    background-color: #f0f0f0;
+}
+
+/* Style cho checkbox */
+.member-container .ant-select-dropdown .ant-select-item-option-state {
+    display: none;
+}
+
+/* Style cho checkbox */
+.member-container .ant-select-item-option-content {
+    flex: 1;
+}
+
+/* Điều chỉnh màu nền cho checkbox được chọn */
+.member-container .ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background-color: #f5f5f5;
+    font-weight: normal;
+}
+
+/* Kiểu dáng cho dropdown box */
+.member-container .ant-select-dropdown {
+    width: auto !important;
+    min-width: 100%;
+}
+
+/* Thêm checkbox dạng tích */
+.member-container .ant-select-item-option-selected .check-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-color: #1890ff;
+    border-radius: 2px;
+    position: relative;
+}
+
+.member-container .ant-select-item-option-selected .check-icon:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    transform: translate(-50%, -60%) rotate(45deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .defaults-row {
+        flex-direction: column;
+    }
+
+    .guest-access-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+/* Thêm rules cho modal */
+.ant-modal-mask {
+    z-index: 1050 !important;
+    backdrop-filter: blur(2px);
+}
+
+.ant-modal-wrap {
+    z-index: 1051 !important;
+}
+
+/* Modal nằm trên cùng của sidebar và tất cả các phần tử khác */
+.ant-modal {
+    position: fixed;
+    z-index: 1052 !important;
+         /* căn giữa theo chiều dọc */
+}
+
+.ant-modal-content {
+    border-radius: 8px;
+    overflow: hidden;
+    justify-content: center;  /* căn giữa theo chiều ngang */
+    align-items: center;      /* căn giữa theo chiều dọc */
+}
+
+/* Google icon styling */
+.google-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 8px;
+}

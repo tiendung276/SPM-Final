@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3200:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - REACT_APP_API_BASE_URL=${REACT_APP_API_BASE_URL:-http://localhost:8881/api}
+      - REACT_APP_AUTH_TOKEN_KEY=access_token
+      - REACT_APP_APP_NAME=SPM Frontend
+      - REACT_APP_VERSION=1.0.0
+      - NODE_OPTIONS=--openssl-legacy-provider
+    networks:
+      - spm-network
+
+networks:
+  spm-network:
+    driver: bridge 

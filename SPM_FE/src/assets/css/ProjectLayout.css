@@ -1,0 +1,2177 @@
+.projects-page {
+  margin-top: -1px !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  background-color: #fff !important;
+  border-top: none !important;
+}
+
+.project-container {
+  padding: 0 20px 20px 20px;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background-color: #fff;
+  height: 100%;
+  max-width: 100%;
+  border-top: none !important;
+}
+
+.project-header-wrapper {
+  padding: 0;
+  margin: 0;
+  border-top: none;
+  background-color: #fff;
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding-top: 20px;
+  border-top: none !important;
+}
+
+.project-header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.create-project-btn {
+  background: linear-gradient(135deg, #FC0000, #FF8C00) !important;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: -470px;
+  color: white !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.create-project-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(252, 0, 0, 0.3);
+}
+
+.plus-icon {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.project-table {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.table-header {
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+  color: #555;
+  background-color: #f8f9fa;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.header-cell {
+  padding: 0 15px;
+}
+
+.checkbox-cell {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name-cell {
+  flex: 1;
+  min-width: 150px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.created-by-cell {
+  width: 150px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.created-at-cell {
+  width: 120px;
+  text-align: right;
+  color: #666;
+}
+
+.avatar-group {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  border: 2px solid #fff;
+  position: relative;
+  box-sizing: content-box;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.members-cell {
+  width: 220px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.members-cell .avatar-group {
+  display: flex;
+  align-items: center;
+}
+
+.members-cell .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: -10px;
+  border: 2px solid white;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.members-cell .avatar:last-child {
+  margin-right: 0;
+}
+
+.members-cell .more-avatar {
+  background-color: #f0f0f0;
+  color: #666;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.project-card .avatar-group {
+  margin-top: 8px;
+  max-width: 100%;
+  flex-wrap: nowrap;
+}
+
+.project-card .avatar {
+  z-index: 1;
+}
+
+/* Định nghĩa chung cho member-avatar */
+.member-avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  border: 1.5px solid #fff;
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.member-avatar:not(:first-child) {
+  margin-left: -8px;
+  z-index: 0;
+}
+
+.member-avatar:hover {
+  z-index: 3;
+}
+
+/* Định nghĩa cụ thể cho project-card avatar */
+.project-card .member-avatar {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  margin-right: 0;
+  margin-left: 0;
+  font-size: 11px;
+}
+
+.project-card .more-members {
+  background-color: #ffefed !important;
+  color: #ff4d4d !important;
+  font-size: 10px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.member-info {
+  flex: 1;
+  min-width: 0;
+  margin-left: 8px;
+  overflow: hidden;
+}
+
+.member-name {
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.member-role {
+  color: #777;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.summary-label {
+  font-size: 14px;
+  color: #555;
+}
+
+.summary-value {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.progress-section {
+  margin: 15px 0 20px;
+}
+
+.progress-item {
+  margin-bottom: 8px;
+}
+
+.progress-label {
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.progress-value {
+  font-size: 12px;
+  color: #777;
+  text-align: right;
+  margin-bottom: 3px;
+}
+
+.progress-bar {
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(135deg, #FC0000, #FF8C00) !important;
+}
+
+.detail-btn {
+  background: linear-gradient(135deg, #FC0000, #FF8C00) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.detail-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(252, 0, 0, 0.3);
+}
+
+.detail-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 3px rgba(252, 0, 0, 0.2);
+}
+
+.go-to-project-btn {
+  background: linear-gradient(135deg, #FC0000, #FF8C00) !important;
+  color: white !important;
+  border: none !important;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  padding: 8px 0;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.go-to-project-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(252, 0, 0, 0.3);
+}
+
+.go-to-project-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(252, 0, 0, 0.2);
+}
+
+.ai-assistant {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ai-label {
+  font-size: 12px;
+  color: #030000de;
+  margin-bottom: 5px;
+}
+
+.ai-button {
+  width: 50px;
+  height: 50px;
+  background-color: #ff6d00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+
+/* View Toggle Button */
+.view-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.view-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+.view-toggle-btn:hover,
+.view-toggle-btn:focus {
+  background-color: #f5f5f5;
+  border-color: #d0d0d0;
+}
+
+.view-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.check-icon {
+  width: 14px;
+  height: 14px;
+  margin-right: -4px;
+  /* Điều chỉnh khoảng cách giữa dấu tích và icon */
+}
+
+.view-toggle {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/* Dropdown menu items */
+.dropdown-item-custom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  position: relative;
+}
+
+.dropdown-item-custom:hover {
+  background-color: #f8f9fa;
+}
+
+/* Remove dropdown arrow */
+.view-toggle-btn::after {
+  display: none;
+}
+
+/* Box View */
+.project-grid {
+  margin: 0 -5px;
+}
+
+.project-grid .col-md-4 {
+  padding: 8px;
+}
+
+.projects-page .project-card,
+.project-grid .project-card,
+.col-md-4 .project-card {
+  background-color: #fff !important;
+  background-image: none !important;
+}
+
+.project-card::after {
+  display: none !important;
+}
+
+.project-card {
+  width: 280px;
+  height: 192px;
+  margin-bottom: 0;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  border-top-width: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card.selected {
+  border: 2px solid #ff3b30;
+  box-shadow: 0 4px 8px rgba(255, 59, 48, 0.2);
+}
+
+.project-card .card-header {
+  display: flex;
+  padding: 10px 15px 5px 15px;
+  margin-bottom: 0;
+  border-bottom: none;
+  align-items: center;
+  background-color: #fff !important;
+}
+
+.project-card .member-row {
+  display: flex;
+  padding: 0px 15px 0px 15px;
+  margin-bottom: 0;
+  background-color: #fff !important;
+}
+
+.project-card .left-section {
+  margin-right: 8px;
+}
+
+.project-card .right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 0;
+}
+
+.project-card .spacer {
+  width: 56px;
+}
+
+.project-card .project-card-title {
+  margin-bottom: 3px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.project-card .member-list {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  flex-wrap: nowrap;
+  width: auto;
+  margin-top: 2px;
+}
+
+.project-card .member-avatars {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.project-card .member-avatars .avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 11px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1.5px solid #fff;
+  margin-left: -10px;
+  overflow: hidden;
+}
+
+.project-card .member-avatars .avatar:first-child {
+  margin-left: 0;
+}
+
+.project-card .member-avatars .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card .member-avatars .more-avatar {
+  background-color: #ffefed !important;
+  color: #ff4d4d !important;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Đảm bảo aspect ratio 1:1 cho avatar */
+.project-card-icon,
+.avatar {
+  flex-shrink: 0;
+}
+
+/* Điều chỉnh khoảng cách cho header-content */
+.project-card .header-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2px;
+}
+
+/* Điều chỉnh khoảng cách cho project-card-title */
+.project-card .project-card-title {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+/* Đồng bộ màu avatar giữa panel và cards */
+.member-item:nth-child(1) .member-avatar {
+  background-color: #ffd54f;
+}
+
+.member-item:nth-child(2) .member-avatar {
+  background-color: #81d4fa;
+}
+
+.member-item:nth-child(3) .member-avatar {
+  background-color: #bcaaa4;
+}
+
+.member-item:nth-child(n+4) .member-avatar {
+  background-color: #ff9800;
+}
+
+/* Màu mặc định cho các member khác */
+
+/* Đảm bảo card-description có đủ khoảng cách */
+.card-description {
+  color: #777;
+  font-size: 13px;
+  flex-grow: 1;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 8px;
+  margin-bottom: 0;
+  padding: 0 15px;
+  text-align: left;
+  background-color: #fff !important;
+}
+
+/* Thêm container cho phần description */
+.description-container {
+  margin-left: 15px;
+  /* Khoảng cách giống với padding-left của card header */
+}
+
+.header-content {
+  flex: 1;
+  min-width: 0;
+  overflow: visible;
+}
+
+/* Style cho header của summary */
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.summary-header h5 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Style cho bottom actions */
+.bottom-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Style cho create-ai button */
+.create-ai-btn {
+  background-color: #fff !important;
+  color: #ff6d00 !important;
+  border: 1px solid #ff6d00 !important;
+  border-radius: 25px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.create-ai-btn:hover {
+  background-color: rgba(255, 109, 0, 0.1) !important;
+}
+
+.create-ai-btn i {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+/* Container cho Create AI button và icon */
+.create-ai-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 15px;
+}
+
+/* Hình tròn với gradient màu đỏ đến cam */
+.ai-icon-circle {
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FC0000, #FF8C00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* Icon màu trắng bên trong */
+.ai-icon {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  /* Đảm bảo icon màu trắng */
+}
+
+/* Điều chỉnh style cho project detail panel */
+.project-detail-panel {
+  padding: 0 15px;
+  /* Bỏ padding top */
+  height: 100%;
+  position: relative;
+  font-size: 0.95rem;
+  margin-top: -48px;
+  /* Điều chỉnh margin-top để đưa panel lên cao ngang với nút Create Project */
+}
+
+/* Style cho icon ở góc phải phía trên panel */
+.panel-top-icon {
+  position: absolute;
+  top: -5px;
+  right: 15px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.panel-top-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Style cho panel dropdown menu */
+.panel-dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  width: 200px;
+  z-index: 100;
+  overflow: hidden;
+  animation: fadeIn 0.2s ease;
+}
+
+.panel-dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.panel-dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.panel-dropdown-item img {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+}
+
+.panel-dropdown-item span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.panel-dropdown-item.delete-item span {
+  color: #ff3b30;
+}
+
+/* Điều chỉnh layout cho project title và icon */
+.project-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.project-title h3 {
+  font-size: 1.3rem;
+  margin: 12px 0 0 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.project-detail-panel .project-card-icon {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  background-color: #00dd4e;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.project-detail-panel .project-card-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Điều chỉnh khoảng cách cho phần description */
+.project-description {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.members-section {
+  margin-top: 25px;
+}
+
+.members-section h5 {
+  margin-bottom: 15px;
+}
+
+/* Điều chỉnh kích thước cho các project cards trong grid */
+.project-grid .col-md-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+/* Thêm media query cho kích thước màn hình lớn hơn */
+@media (min-width: 992px) {
+  .project-grid .col-md-4 {
+    flex: 0 0 32%;
+    max-width: 32%;
+    margin: 0 0.66%;
+    margin-bottom: 15px;
+  }
+
+  /* Thêm margin giữa các project cards */
+  .project-grid .row {
+    margin-left: -5px;
+    margin-right: -5px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* Điều chỉnh phần nút trong panel */
+.go-to-project-btn {
+  font-size: 0.9rem;
+  padding: 6px 0;
+}
+
+.create-ai-btn {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+}
+
+/* Thu nhỏ kích thước các item trong members section */
+.member-item {
+  position: relative;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+  margin-bottom: 5px;
+}
+
+.member-item:hover {
+  background-color: #f5f5f5;
+}
+
+.member-avatar {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  border: 1.5px solid #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.member-avatar .avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-info {
+  flex: 1;
+  min-width: 0;
+  margin-left: 8px;
+  overflow: hidden;
+}
+
+.member-name {
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.member-role {
+  color: #777;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Style cho member more action icon */
+.member-more-action {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 8px;
+  opacity: 0;
+  transition: all 0.2s ease;
+  color: #666;
+}
+
+.member-more-action:hover {
+  background-color: #eeeeee;
+  color: #333;
+}
+
+.member-item:hover .member-more-action {
+  opacity: 1;
+}
+
+.member-more-action i {
+  font-size: 14px;
+}
+
+/* Style cho modal thay đổi vai trò */
+.change-role-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.change-role-modal .modal-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: modalAppear 0.3s ease forwards;
+}
+
+.change-role-modal .modal-body {
+  padding: 20px;
+}
+
+.change-role-modal h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Thêm styles cho modal AI Chat */
+.ai-chat-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.ai-chat-modal-content {
+  width: 900px;
+  height: 600px;
+  max-width: 95%;
+  max-height: 90vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Điều chỉnh chiều cao của AI Chat khi hiển thị trong modal */
+.ai-chat-modal-content .ai-chat-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Thêm style cho submenu items */
+.submenu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px 8px 24px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Nếu bạn đang sử dụng img cho icon */
+.submenu-item img {
+  width: 20px;
+  /* Điều chỉnh kích thước icon nếu cần */
+  height: 20px;
+}
+
+/* Nếu bạn đang sử dụng icon font */
+.submenu-item i {
+  width: 20px;
+  /* Đảm bảo tất cả icon có cùng kích thước */
+  text-align: center;
+}
+
+/* Style cho toggle buttons và icons */
+.toggle-icon,
+.project-toggle,
+.project-actions {
+  opacity: 0;
+  /* Ẩn mặc định */
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Hiển thị khi hover vào container */
+.project-item:hover .toggle-icon,
+.project-item:hover .project-toggle,
+.project-item:hover .project-actions {
+  opacity: 1;
+}
+
+/* Style cho nút +/- */
+.expand-collapse-icon {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+/* Hiển thị icon +/- khi hover */
+.submenu-item:hover .expand-collapse-icon {
+  opacity: 1;
+}
+
+/* Style cho project toggle */
+.project-toggle {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* Hiển thị project toggle khi hover */
+.project-header:hover .project-toggle {
+  opacity: 1;
+}
+
+/* Thêm transition mượt mà cho hover effect */
+.submenu-item,
+.project-header {
+  position: relative;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Optional: Thêm hover effect nhẹ */
+.submenu-item:hover,
+.project-header:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Style cho form chỉnh sửa project */
+.edit-project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.edit-project-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 95%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.edit-project-content h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.edit-project-section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.edit-project-field {
+  margin-bottom: 20px;
+}
+
+.edit-project-field label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.edit-project-field input,
+.edit-project-field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.edit-project-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.edit-project-field input:focus,
+.edit-project-field textarea:focus {
+  outline: none;
+  border-color: #ff3b30;
+  box-shadow: 0 0 0 2px rgba(255, 59, 48, 0.1);
+}
+
+.edit-project-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.cancel-btn {
+  background-color: transparent;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cancel-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.save-btn {
+  background-color: #ff3b30;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.save-btn:hover {
+  background-color: #e03028;
+}
+
+.save-btn i {
+  font-size: 12px;
+}
+
+/* Style cho modal xác nhận xóa dự án */
+.delete-project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.delete-project-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 95%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  text-align: center;
+  animation: modalFadeIn 0.3s ease;
+}
+
+.delete-project-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.delete-project-content p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.delete-project-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.delete-project-actions .cancel-btn {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-project-actions .delete-btn {
+  background-color: #ff3b30;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-project-actions .cancel-btn:hover {
+  background-color: #e9ecef;
+}
+
+.delete-project-actions .delete-btn:hover {
+  background-color: #e03028;
+}
+
+/* Thêm đoạn CSS này vào cuối file */
+
+/* Style cho nút chế độ xem */
+.detail-btns {
+  display: flex;
+  align-items: center;
+}
+
+.detail-btn {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.detail-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Hiệu ứng hover cho card project */
+.project-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Hiệu ứng double-click */
+.project-card:active,
+.table-row:active {
+  transform: scale(0.98);
+}
+
+/* Thêm khoảng cách cho member preview */
+.members-preview {
+  padding: 0 15px;
+  margin: 10px 0 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.members-preview .avatar-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.members-preview .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
+}
+
+.members-preview .more-avatar {
+  background-color: #ffefed !important;
+  color: #ff4d4d !important;
+  font-weight: 500;
+  font-size: 11px;
+}
+
+.header-avatars {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  gap: 4px;
+}
+
+.header-avatars .avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
+  background-color: #ffd54f;
+}
+
+.header-avatars .avatar:nth-child(2) {
+  background-color: #81d4fa;
+}
+
+.header-avatars .avatar:nth-child(3) {
+  background-color: #bcaaa4;
+}
+
+.header-avatars .more-avatar {
+  background-color: #ffefed !important;
+  color: #ff4d4d !important;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.project-card-icon {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  background-color: #00dd4e;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.project-card .member-list {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  padding-left: 2px;
+}
+
+.project-card .member-avatar {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  border: 1.5px solid #fff;
+  margin-right: 0;
+  margin-left: 0;
+  flex-shrink: 0;
+  font-size: 11px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.project-card .member-avatar:not(:first-child) {
+  margin-left: -8px;
+  z-index: 0;
+}
+
+.project-card .member-avatar:hover {
+  z-index: 3;
+}
+
+.project-card .member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card .more-members {
+  background-color: #ffefed !important;
+  color: #ff4d4d !important;
+  font-size: 10px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.member-avatar .avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.members-list-view {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+.member-avatar-list {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  border: 1.5px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  font-size: 12px;
+}
+
+.member-avatar-list img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.more-members-list {
+  background-color: #ffefed !important;
+  color: #ff4d4d !important;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.table-row {
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  background-color: #fff;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.table-row:last-child {
+  margin-bottom: 0;
+}
+
+.table-row:hover {
+  transform: translateY(-3px);
+  border-color: #e0e0e0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+}
+
+.table-row.selected {
+  background-color: #fff;
+  border-left: 3px solid #ff3b30;
+  border-color: #ff3b30;
+  box-shadow: 0 3px 10px rgba(255, 59, 48, 0.15);
+}
+
+.cell {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* Style cho member item */
+.member-item {
+  position: relative;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+  margin-bottom: 5px;
+}
+
+.member-item:hover {
+  background-color: #f5f5f5;
+}
+
+/* Style cho member more action icon */
+.member-more-action {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 8px;
+  opacity: 0;
+  transition: all 0.2s ease;
+  color: #666;
+}
+
+.member-more-action:hover {
+  background-color: #eeeeee;
+  color: #333;
+}
+
+.member-item:hover .member-more-action {
+  opacity: 1;
+}
+
+.member-more-action i {
+  font-size: 14px;
+}
+
+/* Thu nhỏ kích thước các item trong members section */
+.members-section {
+  margin-top: 25px;
+}
+
+/* Style cho header của members section */
+.members-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.members-header h5 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Style cho nút thêm thành viên */
+.add-member-btn {
+  width: 24px;
+  height: 24px;
+  background-color: #ff3b30;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-member-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Context Menu */
+.context-menu {
+  position: absolute;
+  width: 200px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1100;
+  overflow: hidden;
+}
+
+.context-menu-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.context-menu-item:hover {
+  background-color: #f8f9fa;
+}
+
+.context-menu-item i {
+  margin-right: 8px;
+  color: #666;
+}
+
+/* Thêm style cho member context menu */
+.member-context-menu {
+  width: 200px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1100;
+  padding: 4px 0;
+  font-size: 14px;
+  position: fixed;
+  transform: translateX(-70%) translateY(5px);
+  border: 1px solid #eee;
+}
+
+.member-context-menu .context-menu-item {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.member-context-menu .context-menu-item:hover {
+  background-color: #f5f5f5;
+}
+
+.member-context-menu .context-menu-item i {
+  margin-right: 10px;
+  width: 16px;
+  text-align: center;
+  color: #666;
+}
+
+/* Thêm animation cho context menu */
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateX(-70%) translateY(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-70%) translateY(5px);
+  }
+}
+
+.member-context-menu {
+  animation: fadeInMenu 0.2s ease forwards;
+}
+
+/* Modal thêm thành viên */
+.add-member-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: modalAppear 0.3s ease forwards;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-header h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+/* Archive Modal */
+.archive-project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.archive-project-modal .modal-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.archive-project-modal h4 {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.archive-project-modal p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.archive-btn {
+  background: linear-gradient(135deg, #FC0000, #FF8C00) !important;
+  border: none !important;
+}
+
+.archive-btn:hover {
+  box-shadow: 0 4px 8px rgba(252, 0, 0, 0.3);
+}
+
+.card-footer {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.creator-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.creator-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.creator-name {
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.created-at {
+  font-size: 12px;
+  color: #999;
+  font-weight: normal;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+/* Style cho modal tạo dự án */
+.create-project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* Sử dụng viewport width để đảm bảo phủ toàn màn hình */
+  height: 100vh;
+  /* Sử dụng viewport height để đảm bảo phủ toàn màn hình */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  /* Đảm bảo hiển thị trên tất cả các phần tử khác */
+}
+
+.create-project-modal .modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 550px;
+  position: relative;
+  animation: modalFadeIn 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.create-project-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.create-project-modal .modal-header h5 {
+  margin: 0;
+  font-size: 22px;
+  color: #333;
+  font-weight: 600;
+}
+
+.create-project-modal .modal-body {
+  padding: 10px 0 20px;
+}
+
+.create-project-modal .section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.create-project-modal .form-group {
+  margin-bottom: 20px;
+}
+
+.create-project-modal .form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.create-project-modal .form-control {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.create-project-modal .form-control:focus {
+  border-color: #ff3b30;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 59, 48, 0.2);
+}
+
+.create-project-modal textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.create-project-modal .modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.create-project-modal .btn {
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.create-project-modal .btn-light {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  color: #495057;
+  height: 38px;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.create-project-modal .btn-danger {
+  background: #ff3b30;
+  border: none;
+  color: white;
+}
+
+.create-project-modal .btn-light:hover {
+  background: #e9ecef;
+}
+
+.create-project-modal .btn-danger:hover {
+  background: #ff1f1f;
+}
+
+.create-project-modal .text-muted {
+  color: #6c757d;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Thêm CSS cho thông báo thành công kiểu toast */
+.success-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background: white;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  animation: slideIn 0.3s ease-out forwards;
+  border-left: 4px solid #4CAF50;
+}
+
+.toast-icon {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4CAF50;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.toast-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.toast-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #333;
+  font-size: 16px;
+}
+
+.toast-message {
+  color: #666;
+  font-size: 14px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Thêm CSS để thu nhỏ nút Create Project trong modal */
+.create-project-modal .go-to-project-btn {
+  width: auto;
+  padding: 8px 20px;
+  font-size: 14px;
+  max-width: 180px;
+  display: inline-block;
+}
+
+/* Căn chỉnh lại các nút trong form tạo dự án */
+.create-project-modal .d-flex.justify-content-end {
+  display: flex;
+  align-items: center !important;
+}
+
+.create-project-modal .btn-light,
+.create-project-modal .go-to-project-btn {
+  box-sizing: border-box;
+  height: 38px;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.create-project-modal .btn-light {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  color: #495057;
+  position: relative;
+  top: 1px;
+  /* Điều chỉnh nút Cancel thấp xuống một chút */
+}
+
+/* Căn chỉnh lại chiều cao của các nút */
+.create-project-modal .d-flex.justify-content-end {
+  display: flex;
+  align-items: center !important;
+}
+
+.create-project-modal .btn-light {
+  box-sizing: border-box;
+  height: 38px;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.create-project-modal .go-to-project-btn {
+  box-sizing: border-box;
+  height: 40px;
+  /* Tăng chiều cao lên 2px */
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 0;
+  width: auto;
+  max-width: 180px;
+}

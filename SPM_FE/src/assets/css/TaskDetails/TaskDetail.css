@@ -1,0 +1,167 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --background-light: #f8f9fa;
+  --border-color: #dee2e6;
+}
+
+.task-detail-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(2px);
+}
+
+.task-detail-title {
+  color: #787486;
+  margin-bottom: 10px !important;
+}
+
+.task-detail-content {
+  background: #fff;
+  border-radius: 1rem;
+  width: 95%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.task-main-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.task-info-container {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-color);
+}
+
+.task-interaction-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.close-btn {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  transition: transform 0.2s ease;
+  border: none;
+  background: var(--background-light);
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+  color: var(--danger-color);
+}
+
+.view-mode-toggle {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+  background: var(--primary-color);
+  color: white;
+  font-weight: 500;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.link-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Style cho tooltip container và tooltip */
+.tooltip-container {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  margin-top: 5px;
+  z-index: 10;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .task-detail-content {
+    width: 95%;
+    height: 90%;
+  }
+
+  .task-main-body {
+    flex-direction: column;
+  }
+
+  .task-info-container {
+    flex: 0 0 auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+}

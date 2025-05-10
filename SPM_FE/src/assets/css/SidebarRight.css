@@ -1,0 +1,558 @@
+/* SidebarRight.css */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-light: #f8f9fa;
+  --border-color: #000407;
+}
+
+.sidebar-right {
+  min-width: 450px;
+  /* Đảm bảo không gian tối thiểu */
+  width: 100%;
+  align-items: flex-end;
+  /* Đẩy nội dung bên trong về phía phải */
+  margin-left: 0;
+  /* Xóa margin left để không có khoảng trống */
+  position: relative;
+  z-index: 0;
+  /* Đảm bảo sidebar nằm dưới task-info khi chồng lấp */
+  height: 100%;
+  /* Đảm bảo chiều cao bằng với container */
+  overflow-y: auto;
+  /* Cho phép cuộn nếu nội dung dài */
+  background: var(--background-light);
+  border-left: 1px solid rgb(4, 8, 16);
+  border-right: 1px solid rgb(4, 8, 16);
+  /* border-radius: 0 1rem 1rem 0; Bo tròn góc phải để khớp với task-detail-content */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.sidebar-right-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  width: 700px;
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  height: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 1rem;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.sidebar-item:hover {
+  background: #e6f7ff;
+}
+
+.sidebar-item-icon {
+  margin-right: 0.75rem;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.sidebar-item-text {
+  flex: 1;
+}
+
+.sidebar-footer {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .sidebar-right {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 50%;
+  }
+}
+
+.sidebar-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.task-main-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  justify-content: flex-start;
+  /* Thay đổi từ space-between thành flex-start để không có khoảng trống */
+  position: relative;
+  /* Đảm bảo các phần tử con có thể định vị so với nó */
+}
+
+/* Xóa hoặc comment các thuộc tính không cần thiết */
+/* .task-detail-panel {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 20px;
+    margin-right: 0;
+    min-width: 1400px;
+    width: auto;
+    overflow-x: hidden;
+  } */
+
+.sidebar-buttons-fixed {
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  gap: 0.05rem;
+  margin-top: 1rem;
+  border: none;
+  box-shadow: none;
+}
+
+.button-wrapper {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: none;
+}
+
+.button-wrapper .comment-btn,
+.button-wrapper .ai-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 1rem;
+  border-radius: 0;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  box-shadow: none;
+}
+
+.button-wrapper .ai-btn {
+  background: linear-gradient(261.12deg, #FC0000 15.89%, #FF8C00 71.79%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.button-wrapper .comment-btn:hover {
+  background: #fff;
+  /* Giữ màu nền khi hover */
+  color: #0055EE;
+}
+
+.button-wrapper .ai-btn:hover {
+  background: #fff;
+  /* Giữ màu nền khi hover */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  border: none;
+}
+
+.button-wrapper .comment-btn span,
+.button-wrapper .ai-btn span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1px;
+}
+
+.button-wrapper .button-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.button-wrapper .comment-btn:hover .button-icon {
+  filter: brightness(0) saturate(100%) invert(31%) sepia(98%) saturate(1946%) hue-rotate(204deg) brightness(97%) contrast(95%);
+}
+
+.button-wrapper .ai-btn:hover .button-icon {
+  filter: brightness(0) saturate(100%) invert(35%) sepia(29%) saturate(3836%) hue-rotate(234deg) brightness(91%) contrast(92%);
+}
+
+.comment-input-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 10px;
+  background: #fff;
+  border-radius: 16px;
+  margin: 0 8px;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease;
+  min-width: 330px;
+}
+
+.textarea-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 32px;
+  max-height: 150px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.comment-textbox.expanded {
+  width: 100%;
+  min-width: 280px;
+  padding: 6px 0;
+  border: none;
+  font-size: 13px;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  min-height: 20px;
+  max-height: 120px;
+  line-height: 1.4;
+  background: transparent;
+}
+
+.attach-btn,
+.send-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  align-self: flex-end;
+  /* Đảm bảo button luôn ở dưới cùng */
+  margin-bottom: 5px;
+  /* Căn chỉnh vị trí để trông đẹp hơn */
+}
+
+.attach-btn:hover,
+.send-btn:hover {
+  background-color: #f0f2f5;
+  border-radius: 50%;
+}
+
+.attach-btn img,
+.send-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.comment-item {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 8px;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.comment-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.reply-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border: none;
+  background: none;
+  color: #65676b;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.reply-btn:hover {
+  background: #f0f2f5;
+  color: #1a73e8;
+}
+
+.reply-btn img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+}
+
+.reply-btn:hover img {
+  opacity: 1;
+}
+
+.replies-container {
+  margin-left: 60px;
+  /* Tăng margin-left từ 24px lên 60px */
+  padding-left: 12px;
+  border-left: 2px solid #e4e6eb;
+  margin-top: 8px;
+}
+
+.reply-comment {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  margin-left: 10px;
+  /* Thêm margin-left để lệch phải thêm */
+}
+
+.reply-input-wrapper {
+  margin-left: 60px;
+  /* Tăng margin-left từ 24px lên 60px */
+  margin-top: 6px;
+  margin-bottom: 10px;
+  background-color: #f0f2f5;
+  border: 1px solid #e4e6eb;
+  border-radius: 16px;
+  padding: 6px 10px;
+  width: calc(100% - 72px);
+  /* Điều chỉnh width để phù hợp với margin-left mới */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reply-input-wrapper .comment-textbox.expanded {
+  background-color: transparent;
+  font-size: 13px;
+  padding: 6px 0;
+  min-height: 20px;
+  max-height: 120px;
+}
+
+.reply-input-wrapper .send-btn {
+  margin-bottom: 0;
+  padding: 6px;
+}
+
+.reply-input-wrapper .send-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Style cho thông tin file đính kèm */
+.attached-file-preview {
+  padding: 4px 0;
+  width: 100%;
+}
+
+.attached-file-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background-color: #f0f2f5;
+  border-radius: 4px;
+  font-size: 12px;
+  max-width: 100%;
+  margin-bottom: 8px;
+}
+
+.file-icon {
+  font-size: 16px;
+}
+
+.file-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 180px;
+}
+
+.remove-file-btn {
+  background: none;
+  border: none;
+  color: #65676b;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+}
+
+.remove-file-btn:hover {
+  color: #ff0000;
+}
+
+.add-comment-section {
+  width: 100%;
+  padding: 0 4px;
+}
+
+.comment-actions-buttons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: flex-end;
+  align-self: flex-end;
+  margin-bottom: 5px;
+}
+
+.comment {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.comment-avatar {
+  width: 36px;
+  height: 36px;
+  background: #2733b5;
+  /* Màu xanh đậm giống hình ảnh */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.reply-comment .comment-avatar {
+  width: 32px;
+  height: 32px;
+  font-size: 13px;
+}
+
+/* Loại bỏ tất cả border và đường viền */
+.sidebar-buttons-fixed,
+.sidebar-buttons-fixed * {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Đảm bảo màu nền trùng với sidebar */
+.sidebar-buttons-fixed,
+.button-wrapper,
+.button-wrapper .comment-btn,
+.button-wrapper .ai-btn {
+  background-color: #fff !important;
+}
+
+/* Style cho các nút trong sidebar */
+.icon-button {
+  background: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+}
+
+/* Style cho icon trong các nút */
+.icon-button img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.8;
+}
+
+/* Nút reply và copy không có border */
+.comment-thread .comment-actions .icon-button,
+.comment-thread .comment-actions button,
+.comment-header .comment-actions button,
+.comment-header .comment-actions .icon-button {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  outline: none !important;
+  border-radius: 0 !important;
+}
+
+/* Style cho container chứa nút */
+.comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  border: none;
+  box-shadow: none;
+}
+
+/* Đảm bảo không có border khi hover */
+.icon-button:hover,
+.comment-actions button:hover {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+}
+
+/* Bỏ tất cả border, shadow cho tất cả button trong comment section */
+.comment-thread button,
+.comment-header button,
+.comment-actions button,
+.replies-container button,
+.icon-button {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+/* Style đặc biệt cho container nút */
+.action-buttons-container {
+  border: none;
+  box-shadow: none;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}

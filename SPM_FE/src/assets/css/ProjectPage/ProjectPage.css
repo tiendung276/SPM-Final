@@ -1,0 +1,154 @@
+.main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scrollable-content {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  /* Thay đổi từ overflow-y: auto */
+}
+
+.calendar-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  overflow: auto;
+  /* Thêm tính năng cuộn cho container này */
+}
+
+.task-info-sidebar {
+  width: 320px;
+  min-width: 280px;
+  max-width: 340px;
+  background-color: white;
+  border-left: 1px solid #ddd;
+  padding: 15px;
+  overflow-y: auto;
+  /* Thêm cuộn cho sidebar */
+  max-height: calc(100vh - 70px);
+  /* Chiều cao tối đa */
+}
+
+.project-page-calendar {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  height: calc(100vh - 120px);
+  /* Adjust based on your header height */
+  overflow: auto;
+}
+
+.calendar-task-container {
+  height: 100%;
+}
+
+.calendar-wrapper {
+  padding: 20px;
+}
+
+.task-info-panel {
+  border-left: 1px solid #e0e0e0;
+  background: #fff;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.view-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.view-dropdown {
+  margin-left: 10px;
+}
+
+.no-task-selected {
+  margin-top: 120px;
+  margin-left: 50px;
+  background-color: #ffffff;
+  /* Màu nền trắng */
+  border: 2px solid #007bff;
+  /* Đường viền màu xanh */
+  border-radius: 15px;
+  /* Bo tròn các góc */
+  padding: 30px;
+  /* Khoảng cách bên trong */
+  text-align: center;
+  /* Căn giữa nội dung */
+  font-family: "Arial", sans-serif;
+  /* Font chữ */
+  color: #333;
+  /* Màu chữ */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  /* Đổ bóng mạnh hơn */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Hiệu ứng chuyển động */
+  position: relative;
+  /* Để sử dụng hiệu ứng pseudo-element */
+  overflow: hidden;
+  /* Ẩn các phần tử tràn ra ngoài */
+}
+
+.no-task-selected::before {
+  content: "";
+  /* Tạo một pseudo-element */
+  position: absolute;
+  /* Đặt vị trí tuyệt đối */
+  top: 0;
+  /* Đặt ở trên cùng */
+  left: 0;
+  /* Đặt ở bên trái */
+  right: 0;
+  /* Đặt ở bên phải */
+  bottom: 0;
+  /* Đặt ở dưới cùng */
+  background: rgba(0, 123, 255, 0.1);
+  /* Màu nền nhẹ nhàng */
+  border-radius: 15px;
+  /* Bo tròn các góc */
+  z-index: 0;
+  /* Đặt dưới cùng */
+}
+
+.no-task-selected h2 {
+  margin: 0;
+  /* Xóa khoảng cách mặc định */
+  font-size: 24px;
+  /* Kích thước chữ tiêu đề */
+  z-index: 1;
+  /* Đặt trên cùng */
+}
+
+.no-task-selected p {
+  margin: 10px 0 0;
+  /* Khoảng cách cho đoạn văn */
+  font-size: 16px;
+  /* Kích thước chữ cho đoạn văn */
+  z-index: 1;
+  /* Đặt trên cùng */
+}
+
+.no-task-selected:hover {
+  transform: translateY(-5px);
+  /* Nâng lên khi hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  /* Đổ bóng mạnh hơn khi hover */
+}
+
+/* Thêm CSS để cải thiện cuộn trong danh sách task */
+.project-list-view {
+  max-height: calc(100vh - 140px);
+  overflow: auto;
+}

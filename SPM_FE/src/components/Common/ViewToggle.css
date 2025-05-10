@@ -1,0 +1,100 @@
+/* View Toggle Button */
+.view-toggle-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    user-select: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.view-toggle-button:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-icon {
+    font-size: 12px;
+    color: #666;
+    margin-left: 2px;
+}
+
+/* View Icons */
+.view-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+}
+
+/* Box Icon */
+.box-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2px;
+    width: 16px;
+    height: 16px;
+}
+
+.box-icon-item {
+    background-color: #666;
+    border-radius: 1px;
+}
+
+/* List Icon */
+.list-icon-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+}
+
+.list-icon-line {
+    height: 2px;
+    background-color: #666;
+    border-radius: 1px;
+}
+
+/* Dropdown Menu */
+.view-toggle-dropdown .ant-dropdown-menu {
+    min-width: 110px;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    padding: 4px 0;
+}
+
+.view-toggle-menu-item {
+    padding: 8px 12px !important;
+}
+
+.view-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.check-icon {
+    position: absolute;
+    left: -14px;
+    color: #1890ff;
+    font-size: 14px;
+}
+
+.view-toggle-menu .ant-dropdown-menu-item-selected {
+    background-color: #f5f5f5 !important;
+    font-weight: normal;
+}
+
+.view-toggle-menu .ant-dropdown-menu-item:hover {
+    background-color: #f0f0f0 !important;
+}

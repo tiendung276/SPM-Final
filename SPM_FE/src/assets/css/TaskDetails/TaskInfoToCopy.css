@@ -1,0 +1,146 @@
+.task-info-container {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+}
+
+.task-info-content {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+}
+
+.task-info-left {
+  flex: 1; /* Take up all available space */
+}
+
+.task-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.task-description {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.task-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.status-badge,
+.priority-badge,
+.tag-badge {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.status-badge.to-do {
+  background-color: #e0e0e0;
+}
+
+.status-badge.in-progress {
+  background-color: #f0e4ff;
+  color: #6f42c1;
+}
+
+.status-badge.done {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.backlog {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.priority-badge.critical {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.priority-badge.high {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.priority-badge.mid {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.priority-badge.low {
+  background-color: #e0e0e0;
+}
+
+.tag-badge {
+  background-color: #e0e0e0;
+}
+
+.tag-badge.dev {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.date-view-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-view-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.date-time-section {
+  display: flex;
+  align-items: center;
+}
+
+.date-text {
+  font-size: 0.9rem;
+}
+
+.dropzone {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dropzone.disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.attachment-list {
+  margin-top: 10px;
+}
+
+.attachment-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.attachment-icon {
+  width: 20px;
+  height: 20px;
+}

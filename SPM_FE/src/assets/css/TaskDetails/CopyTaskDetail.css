@@ -1,0 +1,36 @@
+.d-flex {
+  display: flex;
+}
+
+.vh-100 {
+  height: 120vh !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.main-content {
+  padding: 0px 60px;
+
+  flex: 1;
+}
+
+.task-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: none !important;
+}
+
+.task-detail-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

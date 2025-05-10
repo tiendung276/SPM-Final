@@ -1,0 +1,49 @@
+.project-header-container {
+  padding: 16px 24px;
+}
+.project-header {
+  margin-bottom: 0px !important;
+}
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.project-title-container {
+  display: flex;
+  align-items: center;
+}
+
+.project-title {
+  font-size: 44px !important;
+  font-weight: 700;
+  margin: 0;
+  color: #111827;
+  padding-right: 10px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #6b7280;
+  padding-left: 25px;
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #6b7280;
+  padding-left: 25px;
+}
+.text-mu {
+  color: #787486;
+  font-size: 15px;
+  font-weight: 500;
+}
+.alert {
+  margin-top: 8px;
+}
+.app-icon {
+  cursor: pointer;
+}
