@@ -495,7 +495,7 @@ const Module = () => {
             setIsLoadingProjectTasks(true);
             // Gọi API để lấy danh sách task từ backend
             // Trong trường hợp này, bạn cần thêm API cho việc này trong ProjectApi.js
-            const response = await fetch(`http://localhost:8881/api/projects/${projectId}/tasks/0/1000`, {
+            const response = await fetch(`${API_BASE_URL}/projects/${projectId}/tasks/0/1000`, {
                 headers: {
                     authentication: localStorage.getItem('access_token') || sessionStorage.getItem('access_token'),
                     accept: "application/json",
